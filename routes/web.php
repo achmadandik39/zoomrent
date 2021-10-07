@@ -19,9 +19,11 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('admin');
 });
+
 Route::get('/pages/formpesan', function () {
     return view('formpesan');
 });
+
 Route::get('/pages/pembayaran', function () {
     return view('pembayaran');
 });
@@ -31,3 +33,6 @@ Route::get('/pages/contact', function () {
 Route::get('/pages/about', function () {
     return view('about');
 });
+
+//Pesan
+Route::post('/pesan/tambah','PesanController@tambah');
